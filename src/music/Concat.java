@@ -8,7 +8,12 @@ public class Concat implements Music {
     private final Music second;
     // Rep invariant: m1, m2 != null
     
-    private void checkRep() {
+    private boolean checkRep() {
+        if (first.equals(null) || second.equals(null)) {
+            return false;
+        } else {
+            return true;
+        }
     }
     
     /**
